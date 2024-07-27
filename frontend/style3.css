@@ -1,0 +1,622 @@
+/* Global reset and basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: url('assets/images.jpeg');
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+  background-color: #0070ba; /* Your header background color */
+  color: #fff;
+  padding: 20px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.header .logo {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.navbar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #0070ba; /* Same as header background for consistency */
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-item {
+  margin-bottom: 10px;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.logo-removebg {
+    font-family: var(--ff-oswald);
+    color: var(--white);
+    font-size: 3rem;
+}
+.logo-removebg img {
+    width: 250px;
+    height: 70px;
+    margin-top: 0px;
+}
+.navbar-link span {
+  margin-right: 10px;
+}
+
+.navbar-link ion-icon {
+  font-size: 16px;
+}
+.h1 {
+  --fs-3: 5rem;
+}
+
+.container {
+  text-decoration: #fff;
+  max-width: 540px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.nav-open-btn {
+  color: var(--white);
+  font-size: 35px;
+}
+
+.nav-open-btn ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.btn-outline {
+  max-width: max-content;
+  margin-inline: auto;
+  font-size: var(--fs-9);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  border: 1px solid var(--white);
+  padding: 8px 20px;
+  transition: var(--transition);
+}
+
+.btn-outline:is(:hover, :focus) {
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 900;
+}
+
+/* Logo and heading container */
+.logo-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-heading-container .logo {
+  margin-right: 20px;
+}
+
+/* Search input and button */
+.search {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-input {
+  padding: 10px;
+  width: 70%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search button {
+  padding: 10px 20px;
+  background-color: #0070ba;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search button:hover {
+  background-color: #005c99;
+}
+
+/* Invoice container styles */
+.invoice-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice {
+  padding: 20px;
+}
+
+.header-invoice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 200px;
+  width: 100%;
+}
+
+.logo {
+  width: 100%; /* Adjust as needed */
+  height: 300px;
+}
+
+.address {
+  margin-left: 20px;
+  justify-content: center;
+  text-align: right;
+  color: #fff;
+}
+
+.arrival-notice {
+  text-align: center;
+  margin-left: 5px;
+  flex: 1;
+  justify-items: center;
+  color: #fff;
+  margin-left: 8rem;
+}
+
+.pickup-date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: 16rem;
+}
+
+.pickup-date-container p {
+  margin-left: 16rem;
+}
+
+.recalculate-btn {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #0070ba; /* Adjust to your desired color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.recalculate-btn:hover {
+  background-color: #005c99; /* Darker shade for hover */
+}
+
+.payment-status-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.payment-status-container p {
+  margin: 1;
+}
+
+.payment-status-container span {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.charge-amount table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Align labels and values */
+.invoice-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invoice-details-container p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 26rem;
+}
+
+.invoice-details-container strong {
+  width: 150px; /* Adjust width as needed */
+  text-align: right;
+  margin-right: 10px;
+}
+
+.invoice-details-container span {
+  flex: 1;
+  text-align: left;
+}
+charge-amount table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.charge-amount th, .charge-amount td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.charge-amount th {
+  background-color: #f2f2f2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-open-btn,
+  .nav-close-btn {
+      display: block;
+  }
+
+  .nav-open-btn ion-icon,
+  .nav-close-btn ion-icon {
+      font-size: 24px;
+      color: #fff;
+  }
+
+  .navbar {
+      display: block;
+  }
+
+  .overlay {
+      display: block;
+  }
+}
+/* Add this to your existing style3.css */
+.header {
+  background-size: cover;
+  background-position: center;
+}
+
+.btn--contact {
+  display: none; /* Remove the contact us button */
+}
+
+.header h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+.header .logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.invoice .header-invoice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.invoice .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.invoice .logo {
+  width: 100px;
+  height: auto;
+}
+
+.invoice .address {
+  margin-left: auto;
+  text-align: right;
+  flex: 1;
+}
+
+.invoice .arrival-notice {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.invoice .pickup-date-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.invoice .pickup-date-container p {
+  margin: 0;
+}
+
+.invoice .recalculate-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #0070ba; /* Change to your desired color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.invoice .recalculate-btn:hover {
+  background-color: #005c99; /* Darker shade for hover */
+}
+
+.invoice .payment-status-container {
+  display: flex;
+  align-items: center;
+}
+
+.invoice .payment-status-container p {
+  margin: 0;
+}
+
+.invoice .payment-status-container span {
+  margin-left: 10px;
+}
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  text-align: center;
+  justify-content: center;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-top: 5px;
+  margin-left: 17rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: calc(50% - 5px);
+  border: 1px solid #7D8082;
+  transition: all .15s ease;
+}
+
+.button::before {
+  top: 0;
+  border-bottom-width: 0;
+}
+
+.button::after {
+  bottom: 0;
+  border-top-width: 0;
+}
+
+.button:active,
+.button:focus {
+  outline: none;
+}
+
+.button:active::before,
+.button:active::after {
+  right: 3px;
+  left: 3px;
+}
+
+.button:active::before {
+  top: 3px;
+}
+
+.button:active::after {
+  bottom: 3px;
+}
+
+.button_lg {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.button_lg::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background-color: #0f1923;
+}
+
+.button_lg::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #0f1923;
+  transition: all .2s ease;
+}
+
+.button_sl {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-color: #0070ba;
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
+.button_text {
+  position: relative;
+}
+
+.button:hover {
+  color: #0f1923;
+}
+
+.button:hover .button_sl {
+  width: calc(100% + 15px);
+}
+
+.button:hover .button_lg::after {
+  background-color: #fff;
+}
+/* Add styles for the popup form and blurred background */
+
+.popup-form {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.popup-form .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form .title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup-form .message {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.popup-form .flex {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-form .input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.popup-form .submit {
+  padding: 10px;
+  border: none;
+  background-color: #0070ba;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-form .signin {
+  margin-top: 10px;
+}
+
+.popup-form .signin a {
+  color: #50A3AB;
+  text-decoration: none;
+}
+
+/* Blur the background when the popup form is active */
+body.popup-active::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+
+
+
+

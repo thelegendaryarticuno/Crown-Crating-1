@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Crating | Contact Us</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">
+          <img src="image/logo-removebg.png" alt="">
+        </a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">Transportio</a>
+
+          <button class="nav-close-btn" aria-label="Clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+              <span>Home</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+              <span>About</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+              <span>Service</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index3.html" class="navbar-link" data-nav-link>
+              <span>Payment</span>
+
+              <ion-icon name="chevron-forward"></ion-icon>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>
+              <span>Photo Gallery</span>
+
+              <ion-icon name="chevron-forward"></ion.icon>
+            </a>
+          </li>
+         
+        </ul>
+
+      </nav>
+
+      <a href="index2.html" class="btn btn--contact">Contact Us</a>
+
+      <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+   <br><br><br><br>
+
+    <div class="container1">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form" id="paymentForm">
+            <h3>CONTACT US</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="hidden" name="access_key" value="103229f7-3293-48c3-bf66-ec5ff049deb8">
+            <input type="email" id="email" name="email" placeholder="Your Email-Id" required>
+            <input type="text" id="phone" name="phone" placeholder="Your Phone number" required>
+            <input type="text" id="country" name="country" placeholder="Your Country Name" required>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+               To : 'admin@crowncrating.com',
+               From : document.getElementById("email").value,
+               Subject : "New contact form enquiry",
+               Body : "Name: " + document.getElementById("name").value
+                     + "<br> Email:" + document.getElementById("email").value
+                     + "<br> Phone:" + document.getElementById("phone").value
+                     + "<br> Country:" + document.getElementById("country").value
+                     + "<br> Message:" + document.getElementById("message").value
+            }).then(
+            message => alert("Message sent successfully")
+            );
+        }
+    </script>
+</body>
+</html>
